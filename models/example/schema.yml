@@ -19,3 +19,26 @@ models:
             tests:
                 - unique
                 - not_null
+
+    - name: avg_revenue_coffee
+      description: "rata2 pendapatan per jenis kopi"
+      columns:
+          - name: kopi
+            description: "nama kopi"
+            tests:
+                - unique
+                - not_null  
+          - name: revenue
+            description: "pendapatan per kopi"
+            tests:
+                - unique
+                - not_null  
+              
+
+sources:
+  - name: coffee_dataset
+    database : personal-project-428913
+    schema: coffee_dataset
+    tables:
+      - name: coffee_table
+        description: "data dari bucket otomatis ke bq"
