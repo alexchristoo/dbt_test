@@ -42,3 +42,10 @@ sources:
     tables:
       - name: coffee_table
         description: "data dari bucket otomatis ke bq"
+  
+  - name: store_dataset
+    database : personal-project-428913
+    schema: coffee_dataset
+    tables:
+      - name: transaction_data
+        description: "data store dari bucket otomatis ke bq"
